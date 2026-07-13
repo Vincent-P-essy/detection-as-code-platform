@@ -1,0 +1,9 @@
+- rule: falco.payroll-remote-login
+  desc: Detect a synthetic SSH login to the critical payroll role.
+  condition: evt.type = "remote_login" and evt.source = "linux_audit" and target.role = "payroll-server" and mitre.technique = "T1021.004"
+  output: Synthetic remote login to payroll role
+  priority: WARNING
+  tags:
+    - mitre_lateral_movement
+    - T1021.004
+  enabled: true

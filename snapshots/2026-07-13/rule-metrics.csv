@@ -1,0 +1,8 @@
+rule_id,engine,owner,decision,state,precision,recall,false_positive_rate,alerts,p95_latency_ms,diagnostics,techniques
+falco.payroll-remote-login,falco,runtime-detections@portfolio.local,PROMOTE,production,1.0,1.0,0.0,1,0.005425,,T1021.004
+sigma.broad-authentication-candidate,sigma,identity-detections@portfolio.local,REJECT,quarantined,0.3333333333333333,1.0,0.10526315789473684,3,0.003345,noisy|under_precision|unit_test_failure,T1078
+sigma.identity-session-anomaly,sigma,identity-detections@portfolio.local,PROMOTE,production,1.0,1.0,0.0,1,0.004535,,T1539
+sigma.log-deletion-canary,sigma,endpoint-detections@portfolio.local,HOLD,canary,,,0.0,0,0.004108,silent,T1070.002
+sigma.payroll-sensitive-read-shadow,sigma,detection-engineering@portfolio.local,HOLD,canary,1.0,1.0,0.0,1,0.005978,redundant,T1005
+sigma.payroll-sensitive-read,sigma,detection-engineering@portfolio.local,PROMOTE,production,1.0,1.0,0.0,1,0.006214,,T1005
+yara.simulated-payroll-export,yara,malware-analysis@portfolio.local,PROMOTE,production,1.0,1.0,0.0,1,0.006938,,T1005

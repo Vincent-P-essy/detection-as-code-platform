@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "datasets": [
+    {
+      "id": "autonomous-payroll",
+      "kind": "telemetry-jsonl",
+      "description": "Byte-identical vendored telemetry from autonomous-incident-simulator payroll-no-malware golden output.",
+      "path": "datasets/autonomous-payroll/telemetry.jsonl",
+      "sha256": "5535218cf22b9b61249e5c7d6d31994a3da033c5b355a8488ed104351d1c3629",
+      "replay": true
+    },
+    {
+      "id": "benign-office",
+      "kind": "telemetry-jsonl",
+      "description": "Synthetic benign authentication, application, network, and administration baseline.",
+      "path": "datasets/benign-office/telemetry.jsonl",
+      "sha256": "59730c1633cbc26a230ec2770378e4f9c52d142bebeac98880f3d7b7492a479e",
+      "replay": true
+    },
+    {
+      "id": "unit-log-events",
+      "kind": "telemetry-jsonl",
+      "description": "Positive and negative unit fixtures excluded from historical replay to exercise silence analysis.",
+      "path": "datasets/unit-log-events/telemetry.jsonl",
+      "sha256": "2d836a8e5bd7f2e0b56a6509f97733e6752e5c4d9d421ccd1d7d1233f0039d2a",
+      "replay": false
+    },
+    {
+      "id": "artifact-fixtures",
+      "kind": "artifact",
+      "description": "Inert artifact pair evaluated by the official YARA engine.",
+      "cases": [
+        {
+          "id": "simulated-malicious",
+          "path": "datasets/artifacts/simulated-malicious.txt",
+          "sha256": "9d75b83b41d3a969c7267c649fad6a62faee7d6561c25ee9bf522c5d92cb0892",
+          "replay": true
+        },
+        {
+          "id": "benign-handbook",
+          "path": "datasets/artifacts/benign-handbook.txt",
+          "sha256": "1f47214af2d2b37d8d10d28323ded3da82a2de6a0b95331350334d726aa46376",
+          "replay": true
+        }
+      ]
+    }
+  ]
+}

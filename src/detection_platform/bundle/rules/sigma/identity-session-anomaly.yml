@@ -1,0 +1,22 @@
+title: Suspicious identity session anomaly
+id: sigma.identity-session-anomaly
+status: test
+description: Detects a medium-risk synthetic session anomaly from the identity source.
+author: Vincent Plessy
+date: 2026-07-13
+modified: 2026-07-13
+tags:
+  - attack.credential-access
+  - attack.t1539
+logsource:
+  category: authentication
+  product: identity
+detection:
+  selection:
+    source: identity
+    event_type: session_anomaly
+    attributes.risk: medium
+  condition: selection
+falsepositives:
+  - Legitimate session migration
+level: medium

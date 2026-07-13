@@ -1,0 +1,19 @@
+title: Broad authentication success candidate
+id: sigma.broad-authentication-candidate
+status: experimental
+description: Deliberately broad canary candidate retained to demonstrate negative tests and noise rejection.
+author: Vincent Plessy
+date: 2026-07-13
+modified: 2026-07-13
+tags:
+  - attack.defense-evasion
+  - attack.t1078
+logsource:
+  category: authentication
+detection:
+  selection:
+    event_type: authentication_success
+  condition: selection
+falsepositives:
+  - Normal authentication
+level: low

@@ -1,0 +1,1 @@
+"""Detection platform test package."""

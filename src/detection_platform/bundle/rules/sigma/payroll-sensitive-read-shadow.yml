@@ -1,0 +1,22 @@
+title: Sensitive payroll records read shadow candidate
+id: sigma.payroll-sensitive-read-shadow
+status: experimental
+description: Canary shadow intentionally equivalent to the stable rule so redundancy policy can be measured.
+author: Vincent Plessy
+date: 2026-07-13
+modified: 2026-07-13
+tags:
+  - attack.collection
+  - attack.t1005
+logsource:
+  category: application
+  service: payroll
+detection:
+  selection:
+    source: application_audit
+    event_type: sensitive_records_read
+    target.role: payroll-server
+  condition: selection
+falsepositives:
+  - Approved payroll reporting windows
+level: high

@@ -1,0 +1,2 @@
+SIMULATED_SECURITY_HANDBOOK
+This benign training document describes payroll reporting approvals and session hygiene.

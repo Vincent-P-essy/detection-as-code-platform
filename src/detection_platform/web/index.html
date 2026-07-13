@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Detection Engineering Control Plane</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">DETECTION-AS-CODE / MEASURED REPLAY</p>
+          <h1>Detection Engineering Control Plane</h1>
+          <p class="lede">Rules move only when evidence, policy, and change history agree.</p>
+        </div>
+        <div class="health" id="health">CHECKING</div>
+      </header>
+
+      <section class="toolbar panel">
+        <div>
+          <label for="as-of">Assessment date</label>
+          <input id="as-of" type="date" value="2026-07-13">
+        </div>
+        <button id="run" type="button">Replay historical corpus</button>
+        <code id="digest">No replay yet</code>
+      </section>
+      <p class="error" id="error" role="alert" hidden></p>
+
+      <section class="metrics" aria-label="Replay summary">
+        <article><span>Rules</span><strong id="rules">—</strong></article>
+        <article><span>Promote</span><strong id="promote">—</strong></article>
+        <article><span>Hold</span><strong id="hold">—</strong></article>
+        <article><span>Reject</span><strong id="reject">—</strong></article>
+        <article><span>Unit tests</span><strong id="tests">—</strong></article>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">QUALITY LEDGER</p><h2>Rule decisions</h2></div>
+          <span class="notice">SIMULATION ONLY · NO SIEM DEPLOYMENT</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Rule</th><th>Engine</th><th>State</th><th>Precision</th><th>Recall</th><th>FPR</th><th>p95</th><th>Decision</th></tr>
+            </thead>
+            <tbody id="rule-body"><tr><td colspan="8">Run replay to evaluate the bundle.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <p class="eyebrow">HYGIENE</p><h2>Diagnostics</h2>
+          <ul class="checks" id="diagnostics"><li>Awaiting replay</li></ul>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">COVERAGE</p><h2>ATT&amp;CK and engines</h2>
+          <ul class="checks" id="coverage"><li>Awaiting replay</li></ul>
+        </article>
+        <article class="panel wide">
+          <p class="eyebrow">TAMPER-EVIDENT</p><h2>Lifecycle audit</h2>
+          <div class="audit" id="audit">No audit entries yet.</div>
+        </article>
+      </section>
+    </main>
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

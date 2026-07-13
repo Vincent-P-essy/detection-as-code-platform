@@ -1,0 +1,1082 @@
+{
+  "as_of": "2026-07-13",
+  "audit": [
+    {
+      "actor": "deterministic-policy-engine",
+      "change_history_sha256": "dbc305af30a977607e891f21fa41051b4693b6adc55e3cc47bdbd96876583546",
+      "entry_hash": "854788f61b3f0da628ead5df4e2dd6c2e186e3bfbeae109485402783af830805",
+      "event_type": "rule_revision_loaded",
+      "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "revision": 1,
+      "rule_id": "falco.payroll-remote-login",
+      "sequence": 1,
+      "source_sha256": "4f30dc1a87170ea04fa8ec258429ea67ebc4fca7cd90f7848c80d2a2a0d1d8da",
+      "timestamp": "2026-07-13T00:00:01Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "decision": "PROMOTE",
+      "entry_hash": "0e9478818cf5647e60eff066da27a7b8b08c8cd4d56e027c5fb5cc3d9c29fbad",
+      "event_type": "lifecycle_decision",
+      "evidence_sha256": "e0a3680a4299722bd9ea55f89980f3478e19998d71f14e833ddd0bb3d0c2a909",
+      "previous_hash": "854788f61b3f0da628ead5df4e2dd6c2e186e3bfbeae109485402783af830805",
+      "previous_state": "canary",
+      "resulting_state": "production",
+      "rule_id": "falco.payroll-remote-login",
+      "sequence": 2,
+      "timestamp": "2026-07-13T00:00:02Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "change_history_sha256": "74afa87ecebb588778c4d795a243beb6ce2c76b8cfc18a6d08642bbe9107cd67",
+      "entry_hash": "7427cca309806fd37275983f5c57889520ebf1c7e14e8ded1ba669d38b80f41d",
+      "event_type": "rule_revision_loaded",
+      "previous_hash": "0e9478818cf5647e60eff066da27a7b8b08c8cd4d56e027c5fb5cc3d9c29fbad",
+      "revision": 1,
+      "rule_id": "sigma.broad-authentication-candidate",
+      "sequence": 3,
+      "source_sha256": "e322bdd28d98bc795d9cebcc75d720572d8213058537cf205d3a139ea4f2e190",
+      "timestamp": "2026-07-13T00:00:03Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "decision": "REJECT",
+      "entry_hash": "04e6c178468d1c9659be0c1f44f8f57e46b6acdcd85e473a08c3791c192072c4",
+      "event_type": "lifecycle_decision",
+      "evidence_sha256": "24f7e218ddbd37129abdd6f4012d18cb176ef4c984e9b9f1199cb35b472c3744",
+      "previous_hash": "7427cca309806fd37275983f5c57889520ebf1c7e14e8ded1ba669d38b80f41d",
+      "previous_state": "canary",
+      "resulting_state": "quarantined",
+      "rule_id": "sigma.broad-authentication-candidate",
+      "sequence": 4,
+      "timestamp": "2026-07-13T00:00:04Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "change_history_sha256": "29bf8567729aa87b64e9f1a3175d4a8d5f344b782e8b25b25f5fea665258e748",
+      "entry_hash": "673f435d179cd1948ba079a4f016450338233c50adaf6275594a576eae11a851",
+      "event_type": "rule_revision_loaded",
+      "previous_hash": "04e6c178468d1c9659be0c1f44f8f57e46b6acdcd85e473a08c3791c192072c4",
+      "revision": 1,
+      "rule_id": "sigma.identity-session-anomaly",
+      "sequence": 5,
+      "source_sha256": "01df06a55b7ea8cae6b4d9df7ec476f254cdc00b2eadb02acc39ebe90fb3174c",
+      "timestamp": "2026-07-13T00:00:05Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "decision": "PROMOTE",
+      "entry_hash": "c195a37392316de7b9bedb84c3b604b8b45e7f32e77b095e7bc3d57c7c9e6015",
+      "event_type": "lifecycle_decision",
+      "evidence_sha256": "bcbcddb344e5a60e513bafff407a2059e560b540bcd20cc58daa9528054ec99c",
+      "previous_hash": "673f435d179cd1948ba079a4f016450338233c50adaf6275594a576eae11a851",
+      "previous_state": "canary",
+      "resulting_state": "production",
+      "rule_id": "sigma.identity-session-anomaly",
+      "sequence": 6,
+      "timestamp": "2026-07-13T00:00:06Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "change_history_sha256": "218002dcba51603d28e143ae2f2a7f02bd3468b83ed343ba6c544176bfa465c8",
+      "entry_hash": "6788ca83c4acbef4c80c832bb7cf51968e8a6fddd8880ddf0a575ec7aeb6710d",
+      "event_type": "rule_revision_loaded",
+      "previous_hash": "c195a37392316de7b9bedb84c3b604b8b45e7f32e77b095e7bc3d57c7c9e6015",
+      "revision": 1,
+      "rule_id": "sigma.log-deletion-canary",
+      "sequence": 7,
+      "source_sha256": "4f0dfee73ab2f2b43f031f12357400778e498ade050741f6ded7fa40552b9a16",
+      "timestamp": "2026-07-13T00:00:07Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "decision": "HOLD",
+      "entry_hash": "9c4ac11c5c3124f4e2aa1f3cae7a300ff14e4e4b64d2be62a0eb2474186702a3",
+      "event_type": "lifecycle_decision",
+      "evidence_sha256": "56a5884a74dbb727f23d37442c929437250fcac75aa3c73e6f4a7a9c62c0d683",
+      "previous_hash": "6788ca83c4acbef4c80c832bb7cf51968e8a6fddd8880ddf0a575ec7aeb6710d",
+      "previous_state": "canary",
+      "resulting_state": "canary",
+      "rule_id": "sigma.log-deletion-canary",
+      "sequence": 8,
+      "timestamp": "2026-07-13T00:00:08Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "change_history_sha256": "cf5784b46ef67a252ae61b16113b9c8bc1cfaee0e170597e6860c8718baf603e",
+      "entry_hash": "165e985570bc9ee62114a045f26799011886cde11679eff7a659b57904d93ba0",
+      "event_type": "rule_revision_loaded",
+      "previous_hash": "9c4ac11c5c3124f4e2aa1f3cae7a300ff14e4e4b64d2be62a0eb2474186702a3",
+      "revision": 1,
+      "rule_id": "sigma.payroll-sensitive-read-shadow",
+      "sequence": 9,
+      "source_sha256": "d39df483b36f2a3367f07f361ef7524d693e35f9c2b028ab879738309cf215d1",
+      "timestamp": "2026-07-13T00:00:09Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "decision": "HOLD",
+      "entry_hash": "f9c7140f6c85239baec253b7e638d03daca341ac6cb6d046241b7b89fbbab8b1",
+      "event_type": "lifecycle_decision",
+      "evidence_sha256": "706bfb3b1fc7771b4bab5a5b6d2871f85ccbbf4217addeafc17b073e6e1fb8c5",
+      "previous_hash": "165e985570bc9ee62114a045f26799011886cde11679eff7a659b57904d93ba0",
+      "previous_state": "canary",
+      "resulting_state": "canary",
+      "rule_id": "sigma.payroll-sensitive-read-shadow",
+      "sequence": 10,
+      "timestamp": "2026-07-13T00:00:10Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "change_history_sha256": "c0610c1f79e0d903dc32b598be2fe203839a8e576eff4fd45e1187543f6441b1",
+      "entry_hash": "7908c51836957fd158409fc3edefe582f3003792a9dd9fb175f76abf9dff1ba4",
+      "event_type": "rule_revision_loaded",
+      "previous_hash": "f9c7140f6c85239baec253b7e638d03daca341ac6cb6d046241b7b89fbbab8b1",
+      "revision": 1,
+      "rule_id": "sigma.payroll-sensitive-read",
+      "sequence": 11,
+      "source_sha256": "7994bc7068632c0808ed3e787303668a50e87aa4fcc821fccf5a00022ceb27e8",
+      "timestamp": "2026-07-13T00:00:11Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "decision": "PROMOTE",
+      "entry_hash": "3ca86c4f282c5c7a4a47afad2c231421376da7f4cd115fd7eb3b5ee786f3353a",
+      "event_type": "lifecycle_decision",
+      "evidence_sha256": "213d3e47c3d77270ec82686f7659b6241c912de35e2d0d7d6560ec27a0d66f0e",
+      "previous_hash": "7908c51836957fd158409fc3edefe582f3003792a9dd9fb175f76abf9dff1ba4",
+      "previous_state": "production",
+      "resulting_state": "production",
+      "rule_id": "sigma.payroll-sensitive-read",
+      "sequence": 12,
+      "timestamp": "2026-07-13T00:00:12Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "change_history_sha256": "f700916ecaff13d411d24e35773d14139ba5392f8a11b3855c8e71b4e68bec55",
+      "entry_hash": "de88d47ad52274f8de59801298a9b838cccbc29c391af2e5a298881e96d456d3",
+      "event_type": "rule_revision_loaded",
+      "previous_hash": "3ca86c4f282c5c7a4a47afad2c231421376da7f4cd115fd7eb3b5ee786f3353a",
+      "revision": 1,
+      "rule_id": "yara.simulated-payroll-export",
+      "sequence": 13,
+      "source_sha256": "1889efa7c7d9d411d0bb3ed2cfd836a7914d9422d19e77dafac39d8116139aaf",
+      "timestamp": "2026-07-13T00:00:13Z"
+    },
+    {
+      "actor": "deterministic-policy-engine",
+      "decision": "PROMOTE",
+      "entry_hash": "1ed948886dd1509b52b109a2a13e2f919762dd7d6567f1da5175b9a136d09760",
+      "event_type": "lifecycle_decision",
+      "evidence_sha256": "b6a7eb6e1b58dd4ccfa57cb463afabd0e912dee612808492e3c4e0c44024b82b",
+      "previous_hash": "de88d47ad52274f8de59801298a9b838cccbc29c391af2e5a298881e96d456d3",
+      "previous_state": "canary",
+      "resulting_state": "production",
+      "rule_id": "yara.simulated-payroll-export",
+      "sequence": 14,
+      "timestamp": "2026-07-13T00:00:14Z"
+    }
+  ],
+  "coverage": {
+    "declared_mitre_techniques": [
+      "T1005",
+      "T1021.004",
+      "T1070.002",
+      "T1078",
+      "T1539"
+    ],
+    "engines": [
+      "falco",
+      "sigma",
+      "yara"
+    ],
+    "promotable_mitre_techniques": [
+      "T1005",
+      "T1021.004",
+      "T1539"
+    ],
+    "promotable_technique_ratio": 0.6
+  },
+  "datasets": [
+    {
+      "case_count": 12,
+      "description": "Byte-identical vendored telemetry from autonomous-incident-simulator payroll-no-malware golden output.",
+      "id": "autonomous-payroll",
+      "kind": "telemetry-jsonl",
+      "replay": true,
+      "sha256": "5535218cf22b9b61249e5c7d6d31994a3da033c5b355a8488ed104351d1c3629",
+      "source_path": "datasets/autonomous-payroll/telemetry.jsonl"
+    },
+    {
+      "case_count": 8,
+      "description": "Synthetic benign authentication, application, network, and administration baseline.",
+      "id": "benign-office",
+      "kind": "telemetry-jsonl",
+      "replay": true,
+      "sha256": "59730c1633cbc26a230ec2770378e4f9c52d142bebeac98880f3d7b7492a479e",
+      "source_path": "datasets/benign-office/telemetry.jsonl"
+    },
+    {
+      "case_count": 2,
+      "description": "Positive and negative unit fixtures excluded from historical replay to exercise silence analysis.",
+      "id": "unit-log-events",
+      "kind": "telemetry-jsonl",
+      "replay": false,
+      "sha256": "2d836a8e5bd7f2e0b56a6509f97733e6752e5c4d9d421ccd1d7d1233f0039d2a",
+      "source_path": "datasets/unit-log-events/telemetry.jsonl"
+    },
+    {
+      "case_count": 2,
+      "description": "Inert artifact pair evaluated by the official YARA engine.",
+      "id": "artifact-fixtures",
+      "kind": "artifact",
+      "replay": true,
+      "sha256": "16a91c930aa7203f8fad35b97360d724e8dfdd25f39fff72538b80454dbb0723",
+      "source_path": "multiple integrity-pinned artifacts"
+    }
+  ],
+  "diagnostics": {
+    "expired_rules": [],
+    "noisy_rules": [
+      "sigma.broad-authentication-candidate"
+    ],
+    "redundant_pairs": [
+      {
+        "alert_jaccard": 1.0,
+        "left_rule_id": "sigma.payroll-sensitive-read-shadow",
+        "preferred_rule_id": "sigma.payroll-sensitive-read",
+        "redundant_rule_id": "sigma.payroll-sensitive-read-shadow",
+        "right_rule_id": "sigma.payroll-sensitive-read",
+        "shared_techniques": [
+          "T1005"
+        ]
+      }
+    ],
+    "silent_rules": [
+      "sigma.log-deletion-canary"
+    ]
+  },
+  "engine": {
+    "execution_profiles": {
+      "falco": "documented-filter-subset/v1",
+      "sigma": "documented-event-subset/v1",
+      "yara": "yara-python/4.5.4"
+    },
+    "name": "detection-as-code-platform",
+    "python": "3.10.12",
+    "version": "0.1.0"
+  },
+  "functional_sha256": "ea9c4d9916b85d9c27796f6ac96992471d7a655ad2e49abf496957bfb44210cc",
+  "historical_window": {
+    "end": "2026-07-12T09:33:02Z",
+    "start": "2026-07-11T08:00:00Z"
+  },
+  "measurement": {
+    "latency_is_environment_dependent": true,
+    "wall_clock_latency_ms": 38.081259
+  },
+  "provenance": {
+    "canonical_report_sha256": "62bfe9f7034703656420f794fe5f5d4fe2d5f0e59988195d6424d6c1b967318a",
+    "checks": {
+      "vendored:report.json": true,
+      "vendored:telemetry.jsonl": true
+    },
+    "source_project": "autonomous-incident-simulator",
+    "source_repository": "https://github.com/Vincent-P-essy/autonomous-incident-simulator",
+    "source_scenario": "payroll-no-malware",
+    "valid": true
+  },
+  "report_version": "1.0",
+  "rules": [
+    {
+      "diagnostics": [],
+      "lifecycle": {
+        "decision": "PROMOTE",
+        "deployment_effect": "simulation-only",
+        "expectation_met": true,
+        "expected_decision": "PROMOTE",
+        "previous_state": "canary",
+        "reasons": [
+          "all deterministic gates passed"
+        ],
+        "requested_state": "production",
+        "resulting_state": "production"
+      },
+      "matched_case_ids": [
+        "autonomous-payroll:event-49c0063c-20be-5530-90e7-2541b3acd3dd"
+      ],
+      "metrics": {
+        "alert_count": 1,
+        "alerts_per_100_cases": 5.0,
+        "false_negatives": 0,
+        "false_positive_rate": 0.0,
+        "false_positives": 0,
+        "latency_ms": {
+          "max": 0.007064,
+          "median": 0.002666,
+          "min": 0.002423,
+          "p95": 0.005425
+        },
+        "precision": 1.0,
+        "recall": 1.0,
+        "replay_case_count": 20,
+        "true_negatives": 19,
+        "true_positives": 1
+      },
+      "rule": {
+        "api_version": "detection.platform/v1",
+        "change_history": [
+          {
+            "changed_at": "2026-07-13",
+            "changed_by": "runtime-detections@portfolio.local",
+            "revision": 1,
+            "source_sha256": "4f30dc1a87170ea04fa8ec258429ea67ebc4fca7cd90f7848c80d2a2a0d1d8da",
+            "summary": "Initial reviewed rule and positive/negative replay contract."
+          }
+        ],
+        "created_at": "2026-07-13",
+        "description": "Falco-profile filter for a synthetic SSH login to the critical payroll role.",
+        "engine": "falco",
+        "entrypoint": null,
+        "expires_at": "2027-07-13",
+        "id": "falco.payroll-remote-login",
+        "kind": "DetectionRule",
+        "lifecycle": {
+          "canary_percent": 10,
+          "current_state": "canary",
+          "expected_decision": "PROMOTE",
+          "requested_state": "production"
+        },
+        "manifest_path": "manifests/falco-payroll-remote-login.yml",
+        "modified_at": "2026-07-13",
+        "owner": "runtime-detections@portfolio.local",
+        "performance": {
+          "max_alerts_per_100": 10.0,
+          "max_false_positive_rate": 0.0,
+          "max_p95_latency_ms": 5.0,
+          "min_precision": 1.0,
+          "min_recall": 1.0
+        },
+        "revision": 1,
+        "source": "rules/falco/payroll-remote-login.yml",
+        "source_path": "rules/falco/payroll-remote-login.yml",
+        "source_sha256": "4f30dc1a87170ea04fa8ec258429ea67ebc4fca7cd90f7848c80d2a2a0d1d8da",
+        "status": "test",
+        "tests": {
+          "negative_cases": [
+            "benign-office:benign-004"
+          ],
+          "positive_cases": [
+            "autonomous-payroll:event-49c0063c-20be-5530-90e7-2541b3acd3dd"
+          ]
+        },
+        "threat": {
+          "severity": "critical",
+          "summary": "Lateral movement to a sensitive Linux service over SSH.",
+          "techniques": [
+            {
+              "id": "T1021.004",
+              "name": "Remote Services SSH",
+              "tactic": "lateral-movement"
+            }
+          ]
+        },
+        "title": "Remote login to payroll role"
+      },
+      "unit_tests": [
+        {
+          "actual": true,
+          "case_id": "autonomous-payroll:event-49c0063c-20be-5530-90e7-2541b3acd3dd",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "actual": false,
+          "case_id": "benign-office:benign-004",
+          "expected": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "diagnostics": [
+        "noisy",
+        "under_precision",
+        "unit_test_failure"
+      ],
+      "lifecycle": {
+        "decision": "REJECT",
+        "deployment_effect": "simulation-only",
+        "expectation_met": true,
+        "expected_decision": "REJECT",
+        "previous_state": "canary",
+        "reasons": [
+          "noisy",
+          "under_precision",
+          "unit_test_failure"
+        ],
+        "requested_state": "production",
+        "resulting_state": "quarantined"
+      },
+      "matched_case_ids": [
+        "autonomous-payroll:event-25b55178-f1a4-562d-bfc9-b95688b1e854",
+        "benign-office:benign-001",
+        "benign-office:benign-002"
+      ],
+      "metrics": {
+        "alert_count": 3,
+        "alerts_per_100_cases": 15.0,
+        "false_negatives": 0,
+        "false_positive_rate": 0.10526315789473684,
+        "false_positives": 2,
+        "latency_ms": {
+          "max": 0.004265,
+          "median": 0.00308,
+          "min": 0.002782,
+          "p95": 0.003345
+        },
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "replay_case_count": 20,
+        "true_negatives": 17,
+        "true_positives": 1
+      },
+      "rule": {
+        "api_version": "detection.platform/v1",
+        "change_history": [
+          {
+            "changed_at": "2026-07-13",
+            "changed_by": "identity-detections@portfolio.local",
+            "revision": 1,
+            "source_sha256": "e322bdd28d98bc795d9cebcc75d720572d8213058537cf205d3a139ea4f2e190",
+            "summary": "Initial deliberately broad candidate for quarantine-policy evidence."
+          }
+        ],
+        "created_at": "2026-07-13",
+        "description": "Deliberately noisy canary used to prove negative testing and automatic quarantine.",
+        "engine": "sigma",
+        "entrypoint": null,
+        "expires_at": "2027-07-13",
+        "id": "sigma.broad-authentication-candidate",
+        "kind": "DetectionRule",
+        "lifecycle": {
+          "canary_percent": 5,
+          "current_state": "canary",
+          "expected_decision": "REJECT",
+          "requested_state": "production"
+        },
+        "manifest_path": "manifests/sigma-broad-authentication-candidate.yml",
+        "modified_at": "2026-07-13",
+        "owner": "identity-detections@portfolio.local",
+        "performance": {
+          "max_alerts_per_100": 10.0,
+          "max_false_positive_rate": 0.05,
+          "max_p95_latency_ms": 5.0,
+          "min_precision": 0.9,
+          "min_recall": 1.0
+        },
+        "revision": 1,
+        "source": "rules/sigma/broad-authentication-candidate.yml",
+        "source_path": "rules/sigma/broad-authentication-candidate.yml",
+        "source_sha256": "e322bdd28d98bc795d9cebcc75d720572d8213058537cf205d3a139ea4f2e190",
+        "status": "experimental",
+        "tests": {
+          "negative_cases": [
+            "benign-office:benign-001"
+          ],
+          "positive_cases": [
+            "autonomous-payroll:event-25b55178-f1a4-562d-bfc9-b95688b1e854"
+          ]
+        },
+        "threat": {
+          "severity": "medium",
+          "summary": "Suspicious use of valid accounts.",
+          "techniques": [
+            {
+              "id": "T1078",
+              "name": "Valid Accounts",
+              "tactic": "defense-evasion"
+            }
+          ]
+        },
+        "title": "Broad authentication success candidate"
+      },
+      "unit_tests": [
+        {
+          "actual": true,
+          "case_id": "autonomous-payroll:event-25b55178-f1a4-562d-bfc9-b95688b1e854",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "actual": true,
+          "case_id": "benign-office:benign-001",
+          "expected": false,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "diagnostics": [],
+      "lifecycle": {
+        "decision": "PROMOTE",
+        "deployment_effect": "simulation-only",
+        "expectation_met": true,
+        "expected_decision": "PROMOTE",
+        "previous_state": "canary",
+        "reasons": [
+          "all deterministic gates passed"
+        ],
+        "requested_state": "production",
+        "resulting_state": "production"
+      },
+      "matched_case_ids": [
+        "autonomous-payroll:event-94546725-b458-5c3b-8fd7-14ea4e16654a"
+      ],
+      "metrics": {
+        "alert_count": 1,
+        "alerts_per_100_cases": 5.0,
+        "false_negatives": 0,
+        "false_positive_rate": 0.0,
+        "false_positives": 0,
+        "latency_ms": {
+          "max": 0.006033,
+          "median": 0.002872,
+          "min": 0.002644,
+          "p95": 0.004535
+        },
+        "precision": 1.0,
+        "recall": 1.0,
+        "replay_case_count": 20,
+        "true_negatives": 19,
+        "true_positives": 1
+      },
+      "rule": {
+        "api_version": "detection.platform/v1",
+        "change_history": [
+          {
+            "changed_at": "2026-07-13",
+            "changed_by": "identity-detections@portfolio.local",
+            "revision": 1,
+            "source_sha256": "01df06a55b7ea8cae6b4d9df7ec476f254cdc00b2eadb02acc39ebe90fb3174c",
+            "summary": "Initial reviewed identity-session rule and replay contract."
+          }
+        ],
+        "created_at": "2026-07-13",
+        "description": "Correlatable identity signal for an unusual session in the synthetic incident.",
+        "engine": "sigma",
+        "entrypoint": null,
+        "expires_at": "2027-07-13",
+        "id": "sigma.identity-session-anomaly",
+        "kind": "DetectionRule",
+        "lifecycle": {
+          "canary_percent": 10,
+          "current_state": "canary",
+          "expected_decision": "PROMOTE",
+          "requested_state": "production"
+        },
+        "manifest_path": "manifests/sigma-identity-session-anomaly.yml",
+        "modified_at": "2026-07-13",
+        "owner": "identity-detections@portfolio.local",
+        "performance": {
+          "max_alerts_per_100": 10.0,
+          "max_false_positive_rate": 0.0,
+          "max_p95_latency_ms": 5.0,
+          "min_precision": 1.0,
+          "min_recall": 1.0
+        },
+        "revision": 1,
+        "source": "rules/sigma/identity-session-anomaly.yml",
+        "source_path": "rules/sigma/identity-session-anomaly.yml",
+        "source_sha256": "01df06a55b7ea8cae6b4d9df7ec476f254cdc00b2eadb02acc39ebe90fb3174c",
+        "status": "test",
+        "tests": {
+          "negative_cases": [
+            "benign-office:benign-005"
+          ],
+          "positive_cases": [
+            "autonomous-payroll:event-94546725-b458-5c3b-8fd7-14ea4e16654a"
+          ]
+        },
+        "threat": {
+          "severity": "high",
+          "summary": "Exposure and reuse of a browser session token.",
+          "techniques": [
+            {
+              "id": "T1539",
+              "name": "Steal Web Session Cookie",
+              "tactic": "credential-access"
+            }
+          ]
+        },
+        "title": "Suspicious identity session anomaly"
+      },
+      "unit_tests": [
+        {
+          "actual": true,
+          "case_id": "autonomous-payroll:event-94546725-b458-5c3b-8fd7-14ea4e16654a",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "actual": false,
+          "case_id": "benign-office:benign-005",
+          "expected": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "diagnostics": [
+        "silent"
+      ],
+      "lifecycle": {
+        "decision": "HOLD",
+        "deployment_effect": "simulation-only",
+        "expectation_met": true,
+        "expected_decision": "HOLD",
+        "previous_state": "canary",
+        "reasons": [
+          "silent"
+        ],
+        "requested_state": "production",
+        "resulting_state": "canary"
+      },
+      "matched_case_ids": [],
+      "metrics": {
+        "alert_count": 0,
+        "alerts_per_100_cases": 0.0,
+        "false_negatives": 0,
+        "false_positive_rate": 0.0,
+        "false_positives": 0,
+        "latency_ms": {
+          "max": 0.004237,
+          "median": 0.002898,
+          "min": 0.002763,
+          "p95": 0.004108
+        },
+        "precision": null,
+        "recall": null,
+        "replay_case_count": 20,
+        "true_negatives": 20,
+        "true_positives": 0
+      },
+      "rule": {
+        "api_version": "detection.platform/v1",
+        "change_history": [
+          {
+            "changed_at": "2026-07-13",
+            "changed_by": "endpoint-detections@portfolio.local",
+            "revision": 1,
+            "source_sha256": "4f0dfee73ab2f2b43f031f12357400778e498ade050741f6ded7fa40552b9a16",
+            "summary": "Initial canary fixture designed to exercise historical-silence policy."
+          }
+        ],
+        "created_at": "2026-07-13",
+        "description": "Unit-tested rule expected to remain in canary while historical replay is silent.",
+        "engine": "sigma",
+        "entrypoint": null,
+        "expires_at": "2027-07-13",
+        "id": "sigma.log-deletion-canary",
+        "kind": "DetectionRule",
+        "lifecycle": {
+          "canary_percent": 10,
+          "current_state": "canary",
+          "expected_decision": "HOLD",
+          "requested_state": "production"
+        },
+        "manifest_path": "manifests/sigma-log-deletion-canary.yml",
+        "modified_at": "2026-07-13",
+        "owner": "endpoint-detections@portfolio.local",
+        "performance": {
+          "max_alerts_per_100": 5.0,
+          "max_false_positive_rate": 0.0,
+          "max_p95_latency_ms": 5.0,
+          "min_precision": 1.0,
+          "min_recall": 1.0
+        },
+        "revision": 1,
+        "source": "rules/sigma/log-deletion-canary.yml",
+        "source_path": "rules/sigma/log-deletion-canary.yml",
+        "source_sha256": "4f0dfee73ab2f2b43f031f12357400778e498ade050741f6ded7fa40552b9a16",
+        "status": "test",
+        "tests": {
+          "negative_cases": [
+            "unit-log-events:unit-log-002"
+          ],
+          "positive_cases": [
+            "unit-log-events:unit-log-001"
+          ]
+        },
+        "threat": {
+          "severity": "high",
+          "summary": "Deletion of Linux audit logs to impair defenses.",
+          "techniques": [
+            {
+              "id": "T1070.002",
+              "name": "Clear Linux or Mac System Logs",
+              "tactic": "defense-evasion"
+            }
+          ]
+        },
+        "title": "Linux audit log deletion canary"
+      },
+      "unit_tests": [
+        {
+          "actual": true,
+          "case_id": "unit-log-events:unit-log-001",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "actual": false,
+          "case_id": "unit-log-events:unit-log-002",
+          "expected": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "diagnostics": [
+        "redundant"
+      ],
+      "lifecycle": {
+        "decision": "HOLD",
+        "deployment_effect": "simulation-only",
+        "expectation_met": true,
+        "expected_decision": "HOLD",
+        "previous_state": "canary",
+        "reasons": [
+          "redundant"
+        ],
+        "requested_state": "production",
+        "resulting_state": "canary"
+      },
+      "matched_case_ids": [
+        "autonomous-payroll:event-44ecaaf0-e6fe-5de3-9850-8bfdb7fe85b7"
+      ],
+      "metrics": {
+        "alert_count": 1,
+        "alerts_per_100_cases": 5.0,
+        "false_negatives": 0,
+        "false_positive_rate": 0.0,
+        "false_positives": 0,
+        "latency_ms": {
+          "max": 0.006301,
+          "median": 0.003026,
+          "min": 0.002784,
+          "p95": 0.005978
+        },
+        "precision": 1.0,
+        "recall": 1.0,
+        "replay_case_count": 20,
+        "true_negatives": 19,
+        "true_positives": 1
+      },
+      "rule": {
+        "api_version": "detection.platform/v1",
+        "change_history": [
+          {
+            "changed_at": "2026-07-13",
+            "changed_by": "detection-engineering@portfolio.local",
+            "revision": 1,
+            "source_sha256": "d39df483b36f2a3367f07f361ef7524d693e35f9c2b028ab879738309cf215d1",
+            "summary": "Initial shadow candidate designed to exercise redundancy policy."
+          }
+        ],
+        "created_at": "2026-07-13",
+        "description": "Equivalent canary retained to exercise deterministic redundancy analysis.",
+        "engine": "sigma",
+        "entrypoint": null,
+        "expires_at": "2027-07-13",
+        "id": "sigma.payroll-sensitive-read-shadow",
+        "kind": "DetectionRule",
+        "lifecycle": {
+          "canary_percent": 10,
+          "current_state": "canary",
+          "expected_decision": "HOLD",
+          "requested_state": "production"
+        },
+        "manifest_path": "manifests/sigma-payroll-sensitive-read-shadow.yml",
+        "modified_at": "2026-07-13",
+        "owner": "detection-engineering@portfolio.local",
+        "performance": {
+          "max_alerts_per_100": 10.0,
+          "max_false_positive_rate": 0.0,
+          "max_p95_latency_ms": 5.0,
+          "min_precision": 1.0,
+          "min_recall": 1.0
+        },
+        "revision": 1,
+        "source": "rules/sigma/payroll-sensitive-read-shadow.yml",
+        "source_path": "rules/sigma/payroll-sensitive-read-shadow.yml",
+        "source_sha256": "d39df483b36f2a3367f07f361ef7524d693e35f9c2b028ab879738309cf215d1",
+        "status": "experimental",
+        "tests": {
+          "negative_cases": [
+            "benign-office:benign-003"
+          ],
+          "positive_cases": [
+            "autonomous-payroll:event-44ecaaf0-e6fe-5de3-9850-8bfdb7fe85b7"
+          ]
+        },
+        "threat": {
+          "severity": "high",
+          "summary": "Collection of sensitive payroll records after unauthorized access.",
+          "techniques": [
+            {
+              "id": "T1005",
+              "name": "Data from Local System",
+              "tactic": "collection"
+            }
+          ]
+        },
+        "title": "Sensitive payroll records read shadow"
+      },
+      "unit_tests": [
+        {
+          "actual": true,
+          "case_id": "autonomous-payroll:event-44ecaaf0-e6fe-5de3-9850-8bfdb7fe85b7",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "actual": false,
+          "case_id": "benign-office:benign-003",
+          "expected": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "diagnostics": [],
+      "lifecycle": {
+        "decision": "PROMOTE",
+        "deployment_effect": "simulation-only",
+        "expectation_met": true,
+        "expected_decision": "PROMOTE",
+        "previous_state": "production",
+        "reasons": [
+          "all deterministic gates passed"
+        ],
+        "requested_state": "production",
+        "resulting_state": "production"
+      },
+      "matched_case_ids": [
+        "autonomous-payroll:event-44ecaaf0-e6fe-5de3-9850-8bfdb7fe85b7"
+      ],
+      "metrics": {
+        "alert_count": 1,
+        "alerts_per_100_cases": 5.0,
+        "false_negatives": 0,
+        "false_positive_rate": 0.0,
+        "false_positives": 0,
+        "latency_ms": {
+          "max": 0.010941,
+          "median": 0.003644,
+          "min": 0.002983,
+          "p95": 0.006214
+        },
+        "precision": 1.0,
+        "recall": 1.0,
+        "replay_case_count": 20,
+        "true_negatives": 19,
+        "true_positives": 1
+      },
+      "rule": {
+        "api_version": "detection.platform/v1",
+        "change_history": [
+          {
+            "changed_at": "2026-07-13",
+            "changed_by": "detection-engineering@portfolio.local",
+            "revision": 1,
+            "source_sha256": "7994bc7068632c0808ed3e787303668a50e87aa4fcc821fccf5a00022ceb27e8",
+            "summary": "Initial stable payroll-read rule and measured replay contract."
+          }
+        ],
+        "created_at": "2026-07-13",
+        "description": "Stable application-audit detection for sensitive reads on the payroll role.",
+        "engine": "sigma",
+        "entrypoint": null,
+        "expires_at": "2027-07-13",
+        "id": "sigma.payroll-sensitive-read",
+        "kind": "DetectionRule",
+        "lifecycle": {
+          "canary_percent": 100,
+          "current_state": "production",
+          "expected_decision": "PROMOTE",
+          "requested_state": "production"
+        },
+        "manifest_path": "manifests/sigma-payroll-sensitive-read.yml",
+        "modified_at": "2026-07-13",
+        "owner": "detection-engineering@portfolio.local",
+        "performance": {
+          "max_alerts_per_100": 10.0,
+          "max_false_positive_rate": 0.0,
+          "max_p95_latency_ms": 5.0,
+          "min_precision": 1.0,
+          "min_recall": 1.0
+        },
+        "revision": 1,
+        "source": "rules/sigma/payroll-sensitive-read.yml",
+        "source_path": "rules/sigma/payroll-sensitive-read.yml",
+        "source_sha256": "7994bc7068632c0808ed3e787303668a50e87aa4fcc821fccf5a00022ceb27e8",
+        "status": "stable",
+        "tests": {
+          "negative_cases": [
+            "benign-office:benign-003"
+          ],
+          "positive_cases": [
+            "autonomous-payroll:event-44ecaaf0-e6fe-5de3-9850-8bfdb7fe85b7"
+          ]
+        },
+        "threat": {
+          "severity": "high",
+          "summary": "Collection of sensitive payroll records after unauthorized access.",
+          "techniques": [
+            {
+              "id": "T1005",
+              "name": "Data from Local System",
+              "tactic": "collection"
+            }
+          ]
+        },
+        "title": "Sensitive payroll records read"
+      },
+      "unit_tests": [
+        {
+          "actual": true,
+          "case_id": "autonomous-payroll:event-44ecaaf0-e6fe-5de3-9850-8bfdb7fe85b7",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "actual": false,
+          "case_id": "benign-office:benign-003",
+          "expected": false,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "diagnostics": [],
+      "lifecycle": {
+        "decision": "PROMOTE",
+        "deployment_effect": "simulation-only",
+        "expectation_met": true,
+        "expected_decision": "PROMOTE",
+        "previous_state": "canary",
+        "reasons": [
+          "all deterministic gates passed"
+        ],
+        "requested_state": "production",
+        "resulting_state": "production"
+      },
+      "matched_case_ids": [
+        "artifact-fixtures:simulated-malicious"
+      ],
+      "metrics": {
+        "alert_count": 1,
+        "alerts_per_100_cases": 50.0,
+        "false_negatives": 0,
+        "false_positive_rate": 0.0,
+        "false_positives": 0,
+        "latency_ms": {
+          "max": 0.006938,
+          "median": 0.005758,
+          "min": 0.004577,
+          "p95": 0.006938
+        },
+        "precision": 1.0,
+        "recall": 1.0,
+        "replay_case_count": 2,
+        "true_negatives": 1,
+        "true_positives": 1
+      },
+      "rule": {
+        "api_version": "detection.platform/v1",
+        "change_history": [
+          {
+            "changed_at": "2026-07-13",
+            "changed_by": "malware-analysis@portfolio.local",
+            "revision": 1,
+            "source_sha256": "1889efa7c7d9d411d0bb3ed2cfd836a7914d9422d19e77dafac39d8116139aaf",
+            "summary": "Initial official-runtime YARA rule and inert artifact contract."
+          }
+        ],
+        "created_at": "2026-07-13",
+        "description": "Official YARA execution over inert positive and benign artifact fixtures.",
+        "engine": "yara",
+        "entrypoint": "yara_simulated_payroll_export",
+        "expires_at": "2027-07-13",
+        "id": "yara.simulated-payroll-export",
+        "kind": "DetectionRule",
+        "lifecycle": {
+          "canary_percent": 10,
+          "current_state": "canary",
+          "expected_decision": "PROMOTE",
+          "requested_state": "production"
+        },
+        "manifest_path": "manifests/yara-simulated-payroll-export.yml",
+        "modified_at": "2026-07-13",
+        "owner": "malware-analysis@portfolio.local",
+        "performance": {
+          "max_alerts_per_100": 60.0,
+          "max_false_positive_rate": 0.0,
+          "max_p95_latency_ms": 20.0,
+          "min_precision": 1.0,
+          "min_recall": 1.0
+        },
+        "revision": 1,
+        "source": "rules/yara/simulated-payroll-export.yar",
+        "source_path": "rules/yara/simulated-payroll-export.yar",
+        "source_sha256": "1889efa7c7d9d411d0bb3ed2cfd836a7914d9422d19e77dafac39d8116139aaf",
+        "status": "test",
+        "tests": {
+          "negative_cases": [
+            "artifact-fixtures:benign-handbook"
+          ],
+          "positive_cases": [
+            "artifact-fixtures:simulated-malicious"
+          ]
+        },
+        "threat": {
+          "severity": "medium",
+          "summary": "Collection marker embedded in a synthetic incident artifact.",
+          "techniques": [
+            {
+              "id": "T1005",
+              "name": "Data from Local System",
+              "tactic": "collection"
+            }
+          ]
+        },
+        "title": "Simulated payroll export artifact"
+      },
+      "unit_tests": [
+        {
+          "actual": true,
+          "case_id": "artifact-fixtures:simulated-malicious",
+          "expected": true,
+          "passed": true
+        },
+        {
+          "actual": false,
+          "case_id": "artifact-fixtures:benign-handbook",
+          "expected": false,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "all_expected_decisions_met": true,
+    "hold_count": 2,
+    "promote_count": 4,
+    "reject_count": 1,
+    "replay_case_count": 22,
+    "rule_count": 7,
+    "unit_test_count": 14,
+    "unit_test_pass_rate": 0.9285714285714286
+  }
+}

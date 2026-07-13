@@ -1,0 +1,45 @@
+api_version: detection.platform/v1
+kind: DetectionRule
+metadata:
+  id: falco.payroll-remote-login
+  title: Remote login to payroll role
+  owner: runtime-detections@portfolio.local
+  description: Falco-profile filter for a synthetic SSH login to the critical payroll role.
+  created_at: 2026-07-13
+  modified_at: 2026-07-13
+  expires_at: 2027-07-13
+  revision: 1
+  status: test
+spec:
+  engine: falco
+  source: rules/falco/payroll-remote-login.yml
+  source_sha256: 4f30dc1a87170ea04fa8ec258429ea67ebc4fca7cd90f7848c80d2a2a0d1d8da
+  threat:
+    summary: Lateral movement to a sensitive Linux service over SSH.
+    severity: critical
+    techniques:
+      - id: T1021.004
+        name: Remote Services SSH
+        tactic: lateral-movement
+  tests:
+    positive_cases:
+      - autonomous-payroll:event-49c0063c-20be-5530-90e7-2541b3acd3dd
+    negative_cases:
+      - benign-office:benign-004
+  performance:
+    min_precision: 1.0
+    min_recall: 1.0
+    max_false_positive_rate: 0.0
+    max_p95_latency_ms: 5.0
+    max_alerts_per_100: 10.0
+  lifecycle:
+    current_state: canary
+    requested_state: production
+    canary_percent: 10
+    expected_decision: PROMOTE
+history:
+  - revision: 1
+    changed_at: 2026-07-13
+    changed_by: runtime-detections@portfolio.local
+    summary: Initial reviewed rule and positive/negative replay contract.
+    source_sha256: 4f30dc1a87170ea04fa8ec258429ea67ebc4fca7cd90f7848c80d2a2a0d1d8da

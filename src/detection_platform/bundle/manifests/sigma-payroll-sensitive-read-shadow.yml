@@ -1,0 +1,45 @@
+api_version: detection.platform/v1
+kind: DetectionRule
+metadata:
+  id: sigma.payroll-sensitive-read-shadow
+  title: Sensitive payroll records read shadow
+  owner: detection-engineering@portfolio.local
+  description: Equivalent canary retained to exercise deterministic redundancy analysis.
+  created_at: 2026-07-13
+  modified_at: 2026-07-13
+  expires_at: 2027-07-13
+  revision: 1
+  status: experimental
+spec:
+  engine: sigma
+  source: rules/sigma/payroll-sensitive-read-shadow.yml
+  source_sha256: d39df483b36f2a3367f07f361ef7524d693e35f9c2b028ab879738309cf215d1
+  threat:
+    summary: Collection of sensitive payroll records after unauthorized access.
+    severity: high
+    techniques:
+      - id: T1005
+        name: Data from Local System
+        tactic: collection
+  tests:
+    positive_cases:
+      - autonomous-payroll:event-44ecaaf0-e6fe-5de3-9850-8bfdb7fe85b7
+    negative_cases:
+      - benign-office:benign-003
+  performance:
+    min_precision: 1.0
+    min_recall: 1.0
+    max_false_positive_rate: 0.0
+    max_p95_latency_ms: 5.0
+    max_alerts_per_100: 10.0
+  lifecycle:
+    current_state: canary
+    requested_state: production
+    canary_percent: 10
+    expected_decision: HOLD
+history:
+  - revision: 1
+    changed_at: 2026-07-13
+    changed_by: detection-engineering@portfolio.local
+    summary: Initial shadow candidate designed to exercise redundancy policy.
+    source_sha256: d39df483b36f2a3367f07f361ef7524d693e35f9c2b028ab879738309cf215d1

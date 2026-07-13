@@ -1,0 +1,45 @@
+api_version: detection.platform/v1
+kind: DetectionRule
+metadata:
+  id: sigma.identity-session-anomaly
+  title: Suspicious identity session anomaly
+  owner: identity-detections@portfolio.local
+  description: Correlatable identity signal for an unusual session in the synthetic incident.
+  created_at: 2026-07-13
+  modified_at: 2026-07-13
+  expires_at: 2027-07-13
+  revision: 1
+  status: test
+spec:
+  engine: sigma
+  source: rules/sigma/identity-session-anomaly.yml
+  source_sha256: 01df06a55b7ea8cae6b4d9df7ec476f254cdc00b2eadb02acc39ebe90fb3174c
+  threat:
+    summary: Exposure and reuse of a browser session token.
+    severity: high
+    techniques:
+      - id: T1539
+        name: Steal Web Session Cookie
+        tactic: credential-access
+  tests:
+    positive_cases:
+      - autonomous-payroll:event-94546725-b458-5c3b-8fd7-14ea4e16654a
+    negative_cases:
+      - benign-office:benign-005
+  performance:
+    min_precision: 1.0
+    min_recall: 1.0
+    max_false_positive_rate: 0.0
+    max_p95_latency_ms: 5.0
+    max_alerts_per_100: 10.0
+  lifecycle:
+    current_state: canary
+    requested_state: production
+    canary_percent: 10
+    expected_decision: PROMOTE
+history:
+  - revision: 1
+    changed_at: 2026-07-13
+    changed_by: identity-detections@portfolio.local
+    summary: Initial reviewed identity-session rule and replay contract.
+    source_sha256: 01df06a55b7ea8cae6b4d9df7ec476f254cdc00b2eadb02acc39ebe90fb3174c

@@ -1,0 +1,12 @@
+{
+  "snapshot_version": "1.0",
+  "as_of": "2026-07-13",
+  "functional_sha256": "ea9c4d9916b85d9c27796f6ac96992471d7a655ad2e49abf496957bfb44210cc",
+  "files": {
+    "audit-chain.json": "a265e8bf4a146d455031f6d82f062f159c01ff329e59b2441d2300a67abae54f",
+    "replay-report.json": "b4fd37ae946a36c2ac3d83fb337be0c99d9c1de56d42cff288de51bcda01e5d0",
+    "replay-report.md": "23b55c4c53c032362aa12caa7950ef72beafab9daa8fd2c78189a12cde69cec9",
+    "rule-metrics.csv": "f061537e7fe119058f89ffa67c773e31c4c4f322e4dd06cd1fe81d107a9543e6"
+  },
+  "latency_note": "Measured on one local run; CI verifies integrity and functional decisions, not identical timings."
+}

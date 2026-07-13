@@ -1,0 +1,45 @@
+api_version: detection.platform/v1
+kind: DetectionRule
+metadata:
+  id: sigma.log-deletion-canary
+  title: Linux audit log deletion canary
+  owner: endpoint-detections@portfolio.local
+  description: Unit-tested rule expected to remain in canary while historical replay is silent.
+  created_at: 2026-07-13
+  modified_at: 2026-07-13
+  expires_at: 2027-07-13
+  revision: 1
+  status: test
+spec:
+  engine: sigma
+  source: rules/sigma/log-deletion-canary.yml
+  source_sha256: 4f0dfee73ab2f2b43f031f12357400778e498ade050741f6ded7fa40552b9a16
+  threat:
+    summary: Deletion of Linux audit logs to impair defenses.
+    severity: high
+    techniques:
+      - id: T1070.002
+        name: Clear Linux or Mac System Logs
+        tactic: defense-evasion
+  tests:
+    positive_cases:
+      - unit-log-events:unit-log-001
+    negative_cases:
+      - unit-log-events:unit-log-002
+  performance:
+    min_precision: 1.0
+    min_recall: 1.0
+    max_false_positive_rate: 0.0
+    max_p95_latency_ms: 5.0
+    max_alerts_per_100: 5.0
+  lifecycle:
+    current_state: canary
+    requested_state: production
+    canary_percent: 10
+    expected_decision: HOLD
+history:
+  - revision: 1
+    changed_at: 2026-07-13
+    changed_by: endpoint-detections@portfolio.local
+    summary: Initial canary fixture designed to exercise historical-silence policy.
+    source_sha256: 4f0dfee73ab2f2b43f031f12357400778e498ade050741f6ded7fa40552b9a16

@@ -1,0 +1,21 @@
+title: Linux audit log deletion canary
+id: sigma.log-deletion-canary
+status: test
+description: Unit-tested candidate with no hit in the historical replay window, demonstrating silence analysis.
+author: Vincent Plessy
+date: 2026-07-13
+modified: 2026-07-13
+tags:
+  - attack.defense-evasion
+  - attack.t1070.002
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    source: linux_audit
+    event_type: log_file_deleted
+  condition: selection
+falsepositives:
+  - Approved log rotation
+level: high

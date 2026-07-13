@@ -1,0 +1,4 @@
+SIMULATED_INCIDENT_MARKER
+Training-only artifact. No credential or executable content is present.
+PAYROLL_EXPORT
+SESSION_TOKEN_EXPOSED

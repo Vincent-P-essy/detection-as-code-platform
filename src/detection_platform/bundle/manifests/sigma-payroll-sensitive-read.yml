@@ -1,0 +1,45 @@
+api_version: detection.platform/v1
+kind: DetectionRule
+metadata:
+  id: sigma.payroll-sensitive-read
+  title: Sensitive payroll records read
+  owner: detection-engineering@portfolio.local
+  description: Stable application-audit detection for sensitive reads on the payroll role.
+  created_at: 2026-07-13
+  modified_at: 2026-07-13
+  expires_at: 2027-07-13
+  revision: 1
+  status: stable
+spec:
+  engine: sigma
+  source: rules/sigma/payroll-sensitive-read.yml
+  source_sha256: 7994bc7068632c0808ed3e787303668a50e87aa4fcc821fccf5a00022ceb27e8
+  threat:
+    summary: Collection of sensitive payroll records after unauthorized access.
+    severity: high
+    techniques:
+      - id: T1005
+        name: Data from Local System
+        tactic: collection
+  tests:
+    positive_cases:
+      - autonomous-payroll:event-44ecaaf0-e6fe-5de3-9850-8bfdb7fe85b7
+    negative_cases:
+      - benign-office:benign-003
+  performance:
+    min_precision: 1.0
+    min_recall: 1.0
+    max_false_positive_rate: 0.0
+    max_p95_latency_ms: 5.0
+    max_alerts_per_100: 10.0
+  lifecycle:
+    current_state: production
+    requested_state: production
+    canary_percent: 100
+    expected_decision: PROMOTE
+history:
+  - revision: 1
+    changed_at: 2026-07-13
+    changed_by: detection-engineering@portfolio.local
+    summary: Initial stable payroll-read rule and measured replay contract.
+    source_sha256: 7994bc7068632c0808ed3e787303668a50e87aa4fcc821fccf5a00022ceb27e8

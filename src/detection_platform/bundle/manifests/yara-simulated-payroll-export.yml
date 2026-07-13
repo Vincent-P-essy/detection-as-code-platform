@@ -1,0 +1,46 @@
+api_version: detection.platform/v1
+kind: DetectionRule
+metadata:
+  id: yara.simulated-payroll-export
+  title: Simulated payroll export artifact
+  owner: malware-analysis@portfolio.local
+  description: Official YARA execution over inert positive and benign artifact fixtures.
+  created_at: 2026-07-13
+  modified_at: 2026-07-13
+  expires_at: 2027-07-13
+  revision: 1
+  status: test
+spec:
+  engine: yara
+  source: rules/yara/simulated-payroll-export.yar
+  source_sha256: 1889efa7c7d9d411d0bb3ed2cfd836a7914d9422d19e77dafac39d8116139aaf
+  entrypoint: yara_simulated_payroll_export
+  threat:
+    summary: Collection marker embedded in a synthetic incident artifact.
+    severity: medium
+    techniques:
+      - id: T1005
+        name: Data from Local System
+        tactic: collection
+  tests:
+    positive_cases:
+      - artifact-fixtures:simulated-malicious
+    negative_cases:
+      - artifact-fixtures:benign-handbook
+  performance:
+    min_precision: 1.0
+    min_recall: 1.0
+    max_false_positive_rate: 0.0
+    max_p95_latency_ms: 20.0
+    max_alerts_per_100: 60.0
+  lifecycle:
+    current_state: canary
+    requested_state: production
+    canary_percent: 10
+    expected_decision: PROMOTE
+history:
+  - revision: 1
+    changed_at: 2026-07-13
+    changed_by: malware-analysis@portfolio.local
+    summary: Initial official-runtime YARA rule and inert artifact contract.
+    source_sha256: 1889efa7c7d9d411d0bb3ed2cfd836a7914d9422d19e77dafac39d8116139aaf

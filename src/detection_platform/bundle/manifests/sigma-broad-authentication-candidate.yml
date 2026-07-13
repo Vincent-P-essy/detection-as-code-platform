@@ -1,0 +1,45 @@
+api_version: detection.platform/v1
+kind: DetectionRule
+metadata:
+  id: sigma.broad-authentication-candidate
+  title: Broad authentication success candidate
+  owner: identity-detections@portfolio.local
+  description: Deliberately noisy canary used to prove negative testing and automatic quarantine.
+  created_at: 2026-07-13
+  modified_at: 2026-07-13
+  expires_at: 2027-07-13
+  revision: 1
+  status: experimental
+spec:
+  engine: sigma
+  source: rules/sigma/broad-authentication-candidate.yml
+  source_sha256: e322bdd28d98bc795d9cebcc75d720572d8213058537cf205d3a139ea4f2e190
+  threat:
+    summary: Suspicious use of valid accounts.
+    severity: medium
+    techniques:
+      - id: T1078
+        name: Valid Accounts
+        tactic: defense-evasion
+  tests:
+    positive_cases:
+      - autonomous-payroll:event-25b55178-f1a4-562d-bfc9-b95688b1e854
+    negative_cases:
+      - benign-office:benign-001
+  performance:
+    min_precision: 0.9
+    min_recall: 1.0
+    max_false_positive_rate: 0.05
+    max_p95_latency_ms: 5.0
+    max_alerts_per_100: 10.0
+  lifecycle:
+    current_state: canary
+    requested_state: production
+    canary_percent: 5
+    expected_decision: REJECT
+history:
+  - revision: 1
+    changed_at: 2026-07-13
+    changed_by: identity-detections@portfolio.local
+    summary: Initial deliberately broad candidate for quarantine-policy evidence.
+    source_sha256: e322bdd28d98bc795d9cebcc75d720572d8213058537cf205d3a139ea4f2e190
