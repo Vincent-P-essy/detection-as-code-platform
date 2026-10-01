@@ -14,6 +14,12 @@ diagnostics, a deterministic policy decision, and a hash-chained audit trail.
 > cluster. `PROMOTE`, `HOLD`, and `REJECT` are deterministic simulations backed by
 > local fixtures.
 
+## Running example
+
+![detection-as-code-platform running locally](docs/screenshots/application.png)
+
+Historical corpus replay, showing rule promotion decisions and diagnostic checks. [Commands and test results](docs/verification.md).
+
 ## Measured reference run
 
 The committed [reference snapshot](snapshots/2026-07-13/replay-report.md) is
